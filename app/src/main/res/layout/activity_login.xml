@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="@drawable/background"
+    >
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/idIVLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_person_avatar"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="35dp"
+        android:layout_below="@id/idIVLogin"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:id="@+id/idTVSignIn"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idETName"
+        android:layout_below="@id/idTVSignIn"
+        android:hint="Email"
+        app:hintTextColor="@color/white"
+        android:textSize="18dp"
+        android:textColorHint="@color/white"
+        android:layout_margin="15dp"
+        app:startIconDrawable="@drawable/ic_person_icon">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/idNameField"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idETName"
+        android:hint="Password"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        android:id="@+id/idETPass"
+        app:passwordToggleEnabled="true"
+        android:layout_margin="15dp"
+        app:startIconDrawable="@drawable/ic_pass_icon">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/idPassField"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idBtnLogin"
+        android:layout_below="@id/idETPass"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:onClick="loginClicked"
+        android:textColor="@color/white"
+        app:backgroundTint="#3141BB"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/idBtnLogin"
+        android:layout_centerInParent="true"
+        android:id="@+id/idTVOr"
+        android:textStyle="bold"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idBtnToSignUp"
+        android:layout_below="@id/idTVOr"
+        android:text="Create New Account"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:onClick="forwordToSignUpbtnClick"
+        android:textColor="@color/white"
+        app:backgroundTint="#3141BB"
+        />
+
+
+</RelativeLayout>
